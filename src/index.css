@@ -1,0 +1,153 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.todo-app {
+  max-width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 100px auto;
+
+  @media only screen and (max-width: 768px) {
+    margin: 100px initial;
+  }
+}
+
+.todo-app h1 {
+  margin-top: 0;
+  color: #333;
+}
+
+.app-input {
+  display: flex;
+  gap: 15px;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.todo-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.todo-item select {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 23%;
+  font-size: larger;
+}
+
+.todo-item button {
+  background-color: #ff5555;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+  position: relative;
+  left: 20px;
+}
+
+.todo-list {
+  margin-top: 20px;
+}
+
+input[type="text"],
+select,
+button {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:active {
+  background-color: #3e8e41;
+}
+button:disabled {
+  background-color: #cccccc;
+  color: #999999;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.delete-completed {
+  display: inline-grid;
+  background: #1e1919;
+  padding: 5px;
+  border-radius: 5px;
+  gap: 0px;
+}
+
+.icon-wrapper {
+  position: relative;
+}
+
+.tooltip {
+  visibility: hidden;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.icon-wrapper:hover .tooltip {
+  visibility: visible;
+}
+.empty-message {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+.table-row {
+  width: 50px;
+}
+
+.custom-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.completed-task {
+  color: #888;
+  text-decoration: line-through;
+}
